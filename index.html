@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  	<title>Frontend Mentor | NFT preview card component</title>
+	<style>
+  		@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Outfit', sans-serif;
+		}
+		:root{
+			--main-bg: hsl(217, 54%, 11%);
+			--card-bg: hsl(216, 50%, 16%);
+			--line-bg: hsl(215, 32%, 27%);
+			--soft-blue: hsl(215, 51%, 70%);
+			--cyan: hsl(178, 100%, 50%);
+		}
+		body{
+			background-color: var(--main-bg);
+			font-family: 'Outfit';
+			color: aliceblue;
+		}
+		h3{
+			margin-top: 15px;
+			font-weight: 600;
+			width: fit-content;
+			cursor: pointer;
+			transition: all 500ms ease-out;
+		}
+		h3:hover{
+			color: var(--cyan);
+		}
+		p{
+			color: var(--soft-blue);
+			margin: 12px 0 2px 0;
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 150%;
+		}
+		.attribution { font-size: 11px; text-align: center; }
+		.attribution a { color: hsl(228, 45%, 44%); }
+		.container{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 59px auto 13px;
+			height: fit-content;
+		}
+		.card{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			max-width: 300px;
+			width: fit-content;
+			border-radius: 15px;
+			max-height: 520px;
+			height: 100%;
+			padding: 15px;
+			background-color: var(--card-bg);
+		}
+		#eq{
+			position: relative;
+			box-sizing: border-box;
+			height: fit-content;
+			border-radius: 15px;
+		}
+		.texto{
+			max-width: 250px;
+			margin: 5px;
+		}
+		.flex-text{
+			display: flex;
+			justify-content: space-between;
+			max-width: 250px;
+			width: 100%;
+			margin: 0;
+			padding-bottom: 15px;
+			font-family: 'Outfit', sans-serif;
+			font-weight:bold;
+			font-size: 14px;
+			border-bottom: 1px solid var(--line-bg);
+		}
+		.alinear{
+			display: flex;
+		}
+		footer{
+			align-items: center;
+			margin-top: 13px;
+		}
+		h5{
+			color: var(--soft-blue);
+			font-weight: 400;
+		}
+		h5 > a{
+			text-decoration: none;
+			color: #fff;
+			transition: all 500ms ease-out;
+		}
+		a:hover{
+			color: var(--cyan);
+			transition: all 500ms ease-out;
+		}
+		.otromas{
+			height: 250px;
+			width:250px;
+			max-width: 250px;
+			position: absolute;
+		}
+		#encima{
+			height: 250px;
+			width:250px;
+			max-width: 250px;
+			position: absolute;
+			border-radius: 15px;
+			transition: all 800ms ease-out;
+			z-index: 2;
+			cursor: pointer;
+			background: var(--cyan);
+			opacity: 45%;
+		}
+		#view{
+			position: absolute;
+			top: 40%;
+			left: 40%;
+			z-index: 3;
+			transition: all 800ms ease-out;
+			/* visibility: hidden; */
+			opacity: 100%;
+		}
+		.otromas{
+			z-index: 4;
+			cursor: pointer;
+			opacity: 0%;
+			transition: all 800ms ease-out;
+		}
+		.otromas:hover{
+			opacity: 100%;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="card">
+			<div class="otromas">
+				<img id="view" src="./images/icon-view.svg" alt="">
+				<div id="encima"></div>
+			</div>
+			<img id="eq" src="./images/image-equilibrium.jpg" height="100%" width="250px" max-width="250px">
+			<div class="texto">
+				<h3>Equilibrium #3429</h3>
+				<p>Our Equilibrium collection promotes balance and calm.</p>
+				<div class="flex-text">
+					<div class="alinear" style="color:var(--cyan)">
+						<img src="./images/icon-ethereum.svg" alt=""width="11" height="18" style="position: relative; top: 38%; margin-right: 6px;">
+						<p style="color:var(--cyan)">
+							0.041 ETH3
+						</p>
+					</div>
+					<div class="alinear">
+						<img src="./images/icon-clock.svg" alt="" width="17" height="17" style="position: relative; top: 38.8%; margin-right: 5px;">
+						<p>3 days left</p>
+					</div>
+				</div>
+				<footer class="alinear">
+					<img src="./images/image-avatar.png" alt="" height="30px" width="30px" style="border: 2px solid white; border-radius: 100%;">
+					<h5 style="margin-left: 10px;">
+						Creation of <a href="#">Jules Wyvern</a>
+					</h5>
+				</footer>
+			</div>
+		</div>
+	</div>
+   <div class="attribution">
+   	Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+   	Coded by <a href="#">Numa</a>.
+   </div>
+</body>
+</html>
