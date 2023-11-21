@@ -2,10 +2,6 @@
 
 ![](/images/NFT-Card-Component.png)
 
-### Links
-
-- Solution URL: [Add live site URL here](https://your-live-site-url.com)
-
 ### Built with
 
 - HTML
